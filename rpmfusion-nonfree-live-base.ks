@@ -1,6 +1,10 @@
 # Make sure you read /usr/share/doc/rpmfusion-nonfree-remix-kickstarts*/README 
 # before distributing a linux distribution that is build with this kickstart file
 #
+# Reminder: The RPM Fusion Nonfree repos depend on the Free repos; so you should
+# include /usr/share/rpmfusion-free-remix-kickstarts/rpmfusion-free-live-base.ks
+# directly or indirectly via some other "live" kickstart file from the package
+# rpmfusion-free-remix-kickstarts in any kickstart files that include this file.
 
 # enable and use RPM Fusion nonfree
 repo --name=rpmfusion-nonfree-rawhide --mirrorlist=http://mirrors.rpmfusion.org/mirrorlist?repo=nonfree-fedora-rawhide&arch=$basearch
