@@ -2,7 +2,7 @@ Name:       rpmfusion-nonfree-remix-kickstarts
 # we follow the spin-kickstarts version scheme as the files in this 
 # package highly depend on them anyway
 Version:    0.11.1
-Release:    4%{?dist}
+Release:    5%{?dist}
 Summary:    Kickstart files for creating distributions with packages RPM Fusion nonfree
 
 Group:      Applications/System
@@ -51,6 +51,10 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/%{name}/
 
 %changelog
+* Mon Jun 01 2009 Thorsten Leemhuis <fedora at leemhuis dot info > 0.11.1-5
+- add disabled repo definitions for f11 release
+- make the base config "includepkgs=rpmfusion-nonfree-release"
+
 * Sat May 23 2009 Thorsten Leemhuis <fedora at leemhuis dot info> - 0.11.1-4
 - fix cut'n'paste typo in require
 
