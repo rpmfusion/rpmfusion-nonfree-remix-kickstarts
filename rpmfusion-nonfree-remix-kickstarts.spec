@@ -1,8 +1,8 @@
 Name:       rpmfusion-nonfree-remix-kickstarts
 # we follow the spin-kickstarts version scheme as the files in this 
 # package highly depend on them anyway
-Version:    0.11.1
-Release:    5%{?dist}
+Version:    0.15.0
+Release:    1%{?dist}
 Summary:    Kickstart files for creating distributions with packages RPM Fusion nonfree
 
 Group:      Applications/System
