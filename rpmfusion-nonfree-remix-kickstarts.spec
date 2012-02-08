@@ -2,7 +2,7 @@ Name:       rpmfusion-nonfree-remix-kickstarts
 # we follow the spin-kickstarts version scheme as the files in this 
 # package highly depend on them anyway
 Version:    0.16.0
-Release:    0.1%{?dist}
+Release:    0.2%{?dist}
 Summary:    Kickstart files for creating distributions with packages RPM Fusion nonfree
 
 Group:      Applications/System
@@ -51,6 +51,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/%{name}/
 
 %changelog
+* Thu Feb 09 2012 Nicolas Chauvet <kwizart@gmail.com> - 0.16.0-0.2
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_17_Mass_Rebuild
+
 * Sat Oct 08 2011 Nicolas Chauvet <kwizart@gmail.com> - 0.16.0-0.1
 - Update to pre 16.0
 
