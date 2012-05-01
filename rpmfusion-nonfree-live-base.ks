@@ -13,9 +13,9 @@
 ## the repos match what is configured in fedora-live-base.ks
 
 # To compose against the current release tree, use the following "repo"
-#repo --name=rpmfusion-nonfree --mirrorlist=http://mirrors.rpmfusion.org/mirrorlist?repo=nonfree-fedora-16&arch=$basearch --includepkgs=rpmfusion-nonfree-release
+#repo --name=rpmfusion-nonfree --mirrorlist=http://mirrors.rpmfusion.org/mirrorlist?repo=nonfree-fedora-18&arch=$basearch --includepkgs=rpmfusion-nonfree-release
 # To include updates, use the following "repo"
-#repo --name=rpmfusion-nonfree-updates --mirrorlist=http://mirrors.rpmfusion.org/mirrorlist?repo=nonfree-fedora-updates-released-16&arch=$basearch --includepkgs=rpmfusion-nonfree-release
+#repo --name=rpmfusion-nonfree-updates --mirrorlist=http://mirrors.rpmfusion.org/mirrorlist?repo=nonfree-fedora-updates-released-18&arch=$basearch --includepkgs=rpmfusion-nonfree-release
 
 # To compose against rawhide, use the following "repo"
 repo --name=rpmfusion-nonfree-rawhide --mirrorlist=http://mirrors.rpmfusion.org/mirrorlist?repo=nonfree-fedora-rawhide&arch=$basearch --includepkgs=rpmfusion-nonfree-release
@@ -36,9 +36,9 @@ echo "== RPM Fusion Nonfree: Base section =="
 echo "Importing RPM Fusion keys"
 rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-nonfree-fedora-*-primary
 echo "List of packages from RPM Fusion Nonree:"
-rpm -qa --qf '%{NAME} %{SIGGPG:pgpsig} %{SIGPGP:pgpsig} \n' | grep -e 80648b53f09d8368 -e 449d05356d0c8ec2 -e 9d1a9aec952f3af8| awk ' { print $1 } ' | sort
+rpm -qa --qf '%{NAME} %{SIGGPG:pgpsig} %{SIGPGP:pgpsig} \n' | grep -e 0dd634bdd2382b83 -e 90ce094be31b30ca | awk ' { print $1 } ' | sort
 echo "List of incuded RPM Fusion packages with their size:"
-rpm -q --qf '%{SIZE} %{NAME}\n' $(rpm -qa --qf '%{NAME} %{SIGGPG:pgpsig} %{SIGPGP:pgpsig} \n' | grep -e 80648b53f09d8368 -e 449d05356d0c8ec2 -e 9d1a9aec952f3af8| awk ' { print $1 } ') | sort -n
+rpm -q --qf '%{SIZE} %{NAME}\n' $(rpm -qa --qf '%{NAME} %{SIGGPG:pgpsig} %{SIGPGP:pgpsig} \n' | grep -e 0dd634bdd2382b83 -e 90ce094be31b30ca | awk ' { print $1 } ') | sort -n
 echo
 %end
 
