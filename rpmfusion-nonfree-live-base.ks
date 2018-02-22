@@ -36,9 +36,9 @@ echo "== RPM Fusion Nonfree: Base section =="
 echo "Importing RPM Fusion keys"
 rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-nonfree-fedora-*-primary
 echo "List of packages from RPM Fusion Nonree:"
-rpm -qa --qf '%{NAME} %{SIGGPG:pgpsig} %{SIGPGP:pgpsig} \n' | grep -e C1D5D3457F317578802EE33787047784B9C13282 | awk ' { print $1 } ' | sort
+rpm -qa --qf '%{NAME} %{SIGGPG:pgpsig} %{SIGPGP:pgpsig} \n' | grep -e 3DE8C682E38EE9BC0FDFEA47FCAE2EA87F858107 | awk ' { print $1 } ' | sort
 echo "List of incuded RPM Fusion packages with their size:"
-rpm -q --qf '%{SIZE} %{NAME}\n' $(rpm -qa --qf '%{NAME} %{SIGGPG:pgpsig} %{SIGPGP:pgpsig} \n' | grep -e C1D5D3457F317578802EE33787047784B9C13282 | awk ' { print $1 } ') | sort -n
+rpm -q --qf '%{SIZE} %{NAME}\n' $(rpm -qa --qf '%{NAME} %{SIGGPG:pgpsig} %{SIGPGP:pgpsig} \n' | grep -e 3DE8C682E38EE9BC0FDFEA47FCAE2EA87F858107 | awk ' { print $1 } ') | sort -n
 echo
 %end
 

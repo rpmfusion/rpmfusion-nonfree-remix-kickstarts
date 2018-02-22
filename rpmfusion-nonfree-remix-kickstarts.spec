@@ -1,5 +1,5 @@
 Name:       rpmfusion-nonfree-remix-kickstarts
-Version:    0.27
+Version:    0.28
 Release:    1%{?dist}
 Summary:    Kickstart files for creating distributions with packages RPM Fusion nonfree
 
@@ -44,6 +44,9 @@ install -t $RPM_BUILD_ROOT%{_datadir}/%{name}/ -p -m644 \
 %{_datadir}/%{name}/
 
 %changelog
+* Thu Feb 22 2018 Nicolas Chauvet <kwizart@gmail.com> - 0.28-1
+- Update to 0.28
+
 * Fri Sep 01 2017 Nicolas Chauvet <kwizart@gmail.com> - 0.27-1
 - Bump to 27
 
