@@ -1,6 +1,6 @@
 Name:       rpmfusion-nonfree-remix-kickstarts
 Version:    0.28
-Release:    1%{?dist}
+Release:    2%{?dist}
 Summary:    Kickstart files for creating distributions with packages RPM Fusion nonfree
 
 Group:      Applications/System
@@ -44,6 +44,9 @@ install -t $RPM_BUILD_ROOT%{_datadir}/%{name}/ -p -m644 \
 %{_datadir}/%{name}/
 
 %changelog
+* Fri Mar 02 2018 RPM Fusion Release Engineering <leigh123linux@googlemail.com> - 0.28-2
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_28_Mass_Rebuild
+
 * Thu Feb 22 2018 Nicolas Chauvet <kwizart@gmail.com> - 0.28-1
 - Update to 0.28
 
